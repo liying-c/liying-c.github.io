@@ -1,0 +1,98 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+@media print {
+  @page {
+    margin: 0.5in;
+    size: letter;
+  }
+
+  /* Strip Cayman's decorative banner — keep just the name and tagline as plain text */
+  .page-header {
+    background: none !important;
+    color: #155799 !important;
+    padding: 0 !important;
+    margin: 0 0 0.5rem 0 !important;
+    text-align: left;
+  }
+  .project-name {
+    font-size: 1.6rem !important;
+    margin: 0 !important;
+    color: #155799 !important;
+  }
+  .project-tagline {
+    font-size: 0.85rem !important;
+    margin: 0.15rem 0 0 0 !important;
+    color: #555 !important;
+    opacity: 1 !important;
+  }
+  .btn { display: none !important; }
+  .site-footer { display: none !important; }
+
+  /* Main content — tighter typography */
+  .main-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
+    color: #111 !important;
+  }
+
+  /* Section hierarchy */
+  h1, h2, h3, h4 {
+    margin-top: 0.55rem !important;
+    margin-bottom: 0.25rem !important;
+    page-break-after: avoid;
+  }
+  h2 {
+    font-size: 1.15rem !important;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.1rem;
+  }
+  h3 { font-size: 1rem !important; }
+
+  /* Paragraphs and lists */
+  p { margin: 0.2rem 0 !important; }
+  ul, ol {
+    margin: 0.2rem 0 !important;
+    padding-left: 1.2rem !important;
+  }
+  li {
+    margin: 0.15rem 0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Tables (Skills) */
+  table {
+    margin: 0.3rem 0 !important;
+    font-size: 0.9em !important;
+    page-break-inside: avoid;
+  }
+  table th, table td {
+    padding: 0.15rem 0.5rem !important;
+    border: 1px solid #ddd !important;
+  }
+
+  /* Blockquotes — used for header line and section context */
+  blockquote {
+    margin: 0.3rem 0 !important;
+    padding: 0.2rem 0.6rem !important;
+    border-left: 3px solid #ccc !important;
+    background: none !important;
+    font-style: normal !important;
+    color: #333 !important;
+  }
+
+  /* Inline code */
+  code {
+    background: #f0f0f0 !important;
+    padding: 0.05rem 0.2rem !important;
+    font-size: 0.85em !important;
+  }
+
+  /* Horizontal rules */
+  hr { margin: 0.4rem 0 !important; }
+}

@@ -15,14 +15,11 @@
 | Area | Stack |
 |------|-------|
 | **Languages** | Java · Python · SQL · TypeScript · C# · JavaScript · Shell |
-| **AI Workflow** | Claude AI (daily engineering collaborator) · prompt design · agent / tool use patterns |
+| **AI Workflow** | Claude AI (daily engineering collaborator) · LLM integration (Llama 3) · prompt design · agent / tool use patterns |
 | **Backend** | Spring Boot · FastAPI · Express · Flask · Gradio |
 | **Cloud / Edge** | Cloudflare Workers · GCP (BigQuery, Pub/Sub, Cloud Storage) · Azure DevOps · Docker · Linux |
-| **Data & AI** | ETL pipeline design · schema migration · healthcare data analytics · LLM integration (Llama 3) · response parsing |
-| **Databases** | PostgreSQL · MySQL · SQL Server / Azure SQL Edge · BigQuery · SQLite · FoxPro / DBF · Firebase / Firestore |
-| **Testing** | Playwright (E2E) · Cucumber BDD · Jest · Supertest · Pytest · Vitest |
-| **Tooling** | OpenAPI / Swagger · GitHub Actions · semver release flow · Power BI |
-| **Compliance** | ISO 27001 / ISO 27701 process experience |
+| **Data & Databases** | ETL pipeline design · schema migration · PostgreSQL · MySQL · SQL Server · BigQuery · SQLite · FoxPro / DBF · Firebase / Firestore |
+| **Quality & Tooling** | Playwright (E2E) · Cucumber BDD · Jest · Vitest · Pytest · OpenAPI / Swagger · GitHub Actions · ISO 27001 / 27701 |
 
 ## Experience
 
@@ -63,20 +60,12 @@ Two-phase design and shipped Dentall's partner-facing API authorization layer �
 *270+ Vitest unit + integration tests covering auth and scope surfaces.*
 
 ### SEDIA Antifraud — Android scam detector + Edge API gateway
-*Lead developer & mentor · 4-classmate student team · Dec 2025 – Jan 2026 (~3-week sprint)*
+*Lead developer & mentor · 4-classmate student team · Dec 2025 – Jan 2026 (~3-week sprint)* · [App](https://github.com/SEDIAApp2025/AntifraudApp) · [Gateway](https://github.com/SEDIAApp2025/antifraud-gateway)
 
-[github.com/SEDIAApp2025/AntifraudApp](https://github.com/SEDIAApp2025/AntifraudApp) · [github.com/SEDIAApp2025/antifraud-gateway](https://github.com/SEDIAApp2025/antifraud-gateway)
+Hand-coded the TypeScript gateway and AI-paired the Kotlin Android shell from my architecture spec; then onboarded four classmates and mentored them from Git fundamentals through PR-based review across **10+ feature PRs** to v2.1.3. Integrates Google Safe Browsing, a scam phone-number dataset, and an LLM (Llama 3) text-analysis path behind a Cloudflare Workers edge gateway.
 
-Hand-coded the TypeScript gateway and used AI to implement the Kotlin Android shell from my architecture spec in the first week, then onboarded four classmates and ran the project to v2.1.3 in three weeks. The app integrates three risk sources behind a Cloudflare Workers edge gateway: **Google Safe Browsing**, a **scam phone-number dataset**, and an **LLM (Llama 3) text-analysis path**.
-
-**Personally owned**
-- Cloudflare Workers gateway in TypeScript: API scaffold, `x-api-key` auth middleware, auto-generated OpenAPI / Swagger UI, semver-tagged GitHub Actions release flow.
-- LLM response parser with JSON-truncation repair so partial Llama 3 outputs don't break the client.
-- **Specified** API-key hardening on the Android side, with the upstream key pushed into a native **NDK / C++ / CMake** layer so it never ships in the APK.
-
-**Mentoring**
-- Taught teammates Git, branching and PR-based collaboration from scratch.
-- Reviewed **10+ feature PRs** across data-contract design, lifecycle handling and Compose state management.
+- **Cloudflare Workers gateway (TypeScript)** — `x-api-key` auth, auto-generated OpenAPI / Swagger UI, semver-tagged GitHub Actions release flow, LLM response parser with JSON-truncation repair.
+- **Specified API-key hardening** on the Android side — upstream key pushed into a native NDK / C++ / CMake layer so it never ships in the APK.
 
 ## Education & Research
 
@@ -86,9 +75,7 @@ Hand-coded the TypeScript gateway and used AI to implement the Kotlin Android sh
 
 **Fu Jen Catholic University** &nbsp; Bachelor of Engineering — Bachelor's Program in Software Engineering and Digital Innovation Application &nbsp; *(2024 – present)*
 
-**Fu Jen Catholic University** &nbsp; B.A., Italian Language & Culture / Physical Education &nbsp; *(2014 – 2019)*
-
-**Università per Stranieri di Perugia** &nbsp; Italian Language & Culture summer program &nbsp; *(2017)*
+**Fu Jen Catholic University** &nbsp; B.A., Italian Language & Culture / Physical Education &nbsp; *(2014 – 2019)* — incl. summer at **Università per Stranieri di Perugia** *(2017)*
 
 ## Community
 
