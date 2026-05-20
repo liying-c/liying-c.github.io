@@ -85,10 +85,7 @@ Hand-coded the TypeScript gateway and AI-paired the Kotlin Android shell from my
 
 ## Languages
 
-- **中文** — Native
-- **English** — Advanced (worked in English daily at Kantar Group)
-- **Italiano** — Upper-intermediate (summer program at Università per Stranieri di Perugia, 2017)
-- **Deutsch** — Beginner
+**中文** (Native) &nbsp;·&nbsp; **English** (Advanced — daily at Kantar Group) &nbsp;·&nbsp; **Italiano** (Upper-intermediate — Perugia 2017) &nbsp;·&nbsp; **Deutsch** (Beginner)
 
 ---
 
