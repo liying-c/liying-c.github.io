@@ -1,6 +1,6 @@
-> **Backend / data engineer (4+ yrs)** at a healthcare SaaS that's adopted **AI-mandated development** — shipping production code in a daily AI-paired workflow. Incoming M.S. — Digital Twin research (Sep 2026 · Fu Jen Catholic University). Based in Taipei.
+> **Software engineer (5+ yrs)** at a healthcare SaaS that's adopted **AI-mandated development** — shipping production code in a daily AI-paired workflow. Incoming M.S. — Digital Twin research (Sep 2026 · Fu Jen Catholic University). Based in Taipei.
 >
-> [GitHub](https://github.com/liying-c) · [LinkedIn](https://www.linkedin.com/in/chen-li-ying) · 中文 / English / Italiano / Deutsch (beg.)
+> `cliying94 [at] gmail [dot] com` · [GitHub](https://github.com/liying-c) · [LinkedIn](https://www.linkedin.com/in/chen-li-ying) · 中文 / English / Italiano / Deutsch (beg.)
 
 ## Selected Highlights
 
