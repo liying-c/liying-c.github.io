@@ -1,25 +1,12 @@
-> **Software engineer (5+ yrs)** at a healthcare SaaS that's adopted **AI-mandated development** — shipping production code in a daily AI-paired workflow. Incoming M.S. — Digital Twin research (Sep 2026 · Fu Jen Catholic University). Based in Taipei.
+> **Software engineer focused on backend and data-intensive systems** — working across migration/ETL, system integration, APIs, and domain-heavy production software. Most of my recent domain experience is in healthcare. Incoming M.S. — Digital Twin research (Sep 2026 · Fu Jen Catholic University). Based in Taipei.
 >
 > `cliying94 [at] gmail [dot] com` · [GitHub](https://github.com/liying-c) · [LinkedIn](https://www.linkedin.com/in/chen-li-ying) · 中文 / English / Italiano / Deutsch (beg.)
 
 ## Selected Highlights
 
-- **Primary engineer** on Dentall's partner-facing API platform — designed a **least-privilege API-key permission model** (resource × action scopes) replacing a prior all-or-nothing token scheme.
-- Co-built a **heterogeneous data-migration toolchain** across **FoxPro / dBase, SQL Server, MySQL, PostgreSQL and SQLite** — moved **~20% of targeted competing-system clinics** onto Dentall in year one.
-- Owns key **NHI-integration modules** inside dentallHiS — monthly-declarations API, partial-burden-discount reporting, and accounting aligned with Taiwan's evolving claim rules.
-- **Daily AI-assisted engineering practice** — pair with Claude AI on code design, refactor planning, review and ad-hoc tooling across work and side projects.
-- Mentored **4 classmates** through their first end-to-end ship — an LLM-backed Android scam detector + Cloudflare-Workers edge gateway, **3-week sprint** from scaffold to v2.1.3.
-
-## Skills
-
-| Area | Stack |
-|------|-------|
-| **Languages** | Java · Python · SQL · TypeScript · C# · JavaScript · Shell |
-| **AI Workflow** | Claude AI (daily engineering collaborator) · LLM integration (Llama 3) · prompt design · agent / tool use patterns |
-| **Backend** | Spring Boot · FastAPI · Express · Flask · Gradio |
-| **Cloud / Edge** | Cloudflare Workers · GCP (BigQuery, Pub/Sub, Cloud Storage) · Azure DevOps · Docker · Linux |
-| **Data & Databases** | ETL pipeline design · schema migration · PostgreSQL · MySQL · SQL Server · BigQuery · SQLite · FoxPro / DBF · Firebase / Firestore |
-| **Quality & Tooling** | Playwright (E2E) · Cucumber BDD · Jest · Vitest · Pytest · OpenAPI / Swagger · GitHub Actions · ISO 27001 / 27701 |
+- **Own the clinic migration system** at Dentall — reverse-engineer undocumented data models and semantics across **5 competing HIS products**; the system helped **20% of clinics transition and become clients in one year**.
+- Define **system and API boundaries** for self-service clinic kiosk integrations, including workflows where HIS-side and kiosk-side payment state may exist independently or together.
+- Mentored **4 classmates** through their first end-to-end ship — an LLM-backed Android scam detector + Cloudflare Workers gateway, **3-week sprint** from scaffold to v2.1.3 ([App](https://github.com/SEDIAApp2025/AntifraudApp) · [Gateway](https://github.com/SEDIAApp2025/antifraud-gateway)).
 
 ## Experience
 
@@ -28,44 +15,50 @@
 
 > Dentall builds **dentallHiS**, a cloud-based dental clinic management system with deep National Health Insurance (NHI) integration.
 
-- **Designed and shipped the partner-facing API authorization layer** (V2 API-key auth + OAuth-style scope mechanism + CLI provisioning) — written up below under *Featured Projects · Dentall External API*.
-- **Owns NHI-integration modules** in dentallHiS — monthly-declarations API with upload-serial isolation, partial-burden-discount reporting, and accounting integration against Taiwan's evolving NHI claim rules.
-- **Co-built a heterogeneous data-migration toolchain** spanning **FoxPro / dBase, SQL Server, MySQL, PostgreSQL and SQLite**, orchestrated end-to-end via docker-compose (init → DB migration → XML migration → patch → export); moved **~20% of targeted competing-system clinics** onto Dentall in year one.
-- **Built a FastAPI + Gradio analytics interface** for an internal healthcare-AI initiative — chosen so non-engineers on the team could prototype against clinical datasets directly.
-- **Drove BDD adoption** with Cucumber feature files written in **domain-Chinese**, keeping PM / QA / engineering on shared vocabulary; introduced Playwright (TypeScript) E2E to the release workflow.
-- Participating in an **ongoing team-wide refactor toward DDD-style module boundaries** (codebase is not yet DDD); contributed to **ISO 27001 / ISO 27701** compliance reviews.
+#### Clinic migration system · owner *(2022 – present)*
 
-### Database Programmer · Kantar Taiwan *(Kantar Group)*
+- Reverse-engineer undocumented data models, business semantics, and workflows across **5 competing HIS products** through controlled experiments and database diffs to derive migration mappings.
+- Built the end-to-end migration flow for clinical records and NHI claim history, with pre-flight checks, unattended execution, and resumable checkpoints, plus reusable test environments for PM and design to study legacy workflows and validate migrations.
+- The system became the entry point for customers switching to Dentall; **20% of clinics transitioned and became clients in one year**.
+- Currently redesigning transformations so product can define migration rules independently of execution logic, while the system provides **validation, idempotency, resumability, and auditability**; refactoring the legacy Java-shaped Python codebase toward idiomatic state, transformation, and execution boundaries.
+
+#### External API · self-service clinic systems *(2026 – present)*
+
+- Define API and system boundaries between the HIS and configurable self-service check-in / cash-deposit kiosks under incomplete and evolving vendor specifications.
+- Model workflows spanning **HIS-side, kiosk-side, and combined payment states**, where the two systems may own partially independent transaction state.
+- Proposed the integration architecture, scoped device API-key model, and over half of the API surface; evolved a vendor's legacy SOAP specification into a REST contract through repeated specification and architecture reviews.
+- Implemented with **Fastify / TypeScript on Firebase**, with CLI-based provisioning.
+
+#### Java Spring Boot HIS · NHI *(2024 – present)*
+
+- Feature work on NHI billing and drug modules, plus structural cleanup: consolidated the patient-search APIs into a single criteria endpoint, and moved drug reference data out of the HIS into the NHI reference-data service.
+- Operability: request-ID tracing in GCP logs, CI test-matrix fix for OOM, and a usage audit that flagged **115 unused endpoints** for deprecation.
+
+#### NHI reference-data service · owner *(2024 – present)*
+
+- Maintain Drugs and Holiday APIs shared by the HIS and card-reader client, with automated reference-data refresh; primary reviewer for the service.
+
+#### Engineering practice
+
+- **150+ merged PRs** and **120+ code reviews** across 8 repositories.
+- Participate in ISMS / ISO 27001 and 27701 business-continuity drills and internal technical knowledge sharing.
+- Earlier projects include a **FastAPI + Gradio** analysis system for internal AI work and a **Playwright** end-to-end testing prototype.
+
+### Database Programmer / Maintainer · Kantar Taiwan *(Kantar Group)*
 *April 2021 – May 2022 · Taipei*
 
-- Owned database administration — maintenance, schema changes and data updates — for internal BI systems.
-- Built non-standardized **ETL pipelines** in C# and Python to serve research-team requests.
-- Authored **English-language technical documentation** to support cross-team collaboration across Kantar offices.
-- Introduced **Azure DevOps** for source control and release management.
-- Stood up a **GCP** environment to evaluate the feasibility of image-recognition workflows.
+- Independently developed customer-specific **ETL features** for an internal BI platform using SQL Server and C#, including workflows handling personal data under GDPR requirements, working with cross-regional teams across cultures and time zones.
+- Introduced engineering practices and technologies new to the team, including GCP and Azure, Azure DevOps / TFS version-control workflows, MVVM architecture, and TDD concepts.
+- Built a **GCP environment from scratch** to evaluate image-recognition feasibility for a client project.
 
-## Featured Projects
+## Skills
 
-### Dentall External API — Authorization System Design
-*Designer & primary engineer · Mar 2026 – present · Node.js / TypeScript / Fastify 5 / Firestore*
-
-Two-phase design and shipped Dentall's partner-facing API authorization layer — Firestore-backed V2 API-key authentication, an OAuth-style scope mechanism, and the CLI tooling that provisions and manages keys end-to-end.
-
-- **OAuth-style scope mechanism** (`resource:action`) — per-route scope-check hook with structured 403.
-  - Explored a Phase 2 refactor moving the rule store from a source-code lookup table → a per-key Firestore field (with migration + verify scripts and a strict deploy order to avoid 403 storms).
-  - After re-evaluating cost vs current need, **shipped the simpler Phase 1 (lookup table)** and documented Phase 2 as a future-option for when per-key override actually lands as a requirement.
-  - **Zero vender-facing breaking change.**
-- **CLI provisioning tooling** — direct Firestore via Firebase Auth Google SSO (key creation never traverses HTTP). Commands cover create / list / suspend / activate / revoke + admin account bootstrap; vender vs admin RBAC with per-vender ownership isolation.
-
-*270+ Vitest unit + integration tests covering auth and scope surfaces.*
-
-### SEDIA Antifraud — Android scam detector + Edge API gateway
-*Lead developer & mentor · 4-classmate student team · Dec 2025 – Jan 2026 (~3-week sprint)* · [App](https://github.com/SEDIAApp2025/AntifraudApp) · [Gateway](https://github.com/SEDIAApp2025/antifraud-gateway)
-
-Hand-coded the TypeScript gateway and AI-paired the Kotlin Android shell from my architecture spec; then onboarded four classmates and mentored them from Git fundamentals through PR-based review across **10+ feature PRs** to v2.1.3. Integrates Google Safe Browsing, a scam phone-number dataset, and an LLM (Llama 3) text-analysis path behind a Cloudflare Workers edge gateway.
-
-- **Cloudflare Workers gateway (TypeScript)** — `x-api-key` auth, auto-generated OpenAPI / Swagger UI, semver-tagged GitHub Actions release flow, LLM response parser with JSON-truncation repair.
-- **Specified API-key hardening** on the Android side — upstream key pushed into a native NDK / C++ / CMake layer so it never ships in the APK.
+| Area | Stack |
+|------|-------|
+| **Languages** | Python · TypeScript · SQL · Java · C# · JavaScript · Shell |
+| **Backend & Data** | FastAPI · Fastify · Spring Boot · Express · OpenAPI · ETL / migration systems · PostgreSQL · MySQL · SQL Server · SQLite · FoxPro / DBF · BigQuery · Firestore |
+| **Cloud & Tooling** | GCP · Firebase · Cloudflare Workers · Azure DevOps · Docker · GitHub Actions · Playwright · Cucumber BDD · Jest / Vitest / Pytest · ISO 27001 / 27701 |
+| **Healthcare Domain** | HIS · Taiwan NHI workflows · clinical / claims data migration · HL7 · FHIR · structured clinical data |
 
 ## Education & Research
 
@@ -73,9 +66,17 @@ Hand-coded the TypeScript gateway and AI-paired the Kotlin Android shell from my
 - Already joined the lab; research topic confirmed: **Digital Twin for ESG / Life Cycle Assessment**.
 - *Preliminary research work:* [`simapro-preprocess`](https://github.com/liying-c/simapro-preprocess) — Python CLI for cleaning SimaPro CSV exports (ISO 14040 LCA), used to bootstrap the lab's LCI conventions.
 
-**Fu Jen Catholic University** &nbsp; Bachelor of Engineering — Bachelor's Program in Software Engineering and Digital Innovation Application &nbsp; *(2024 – present)*
+**Fu Jen Catholic University** &nbsp; Undergraduate Studies — Bachelor's Program in Software Engineering and Digital Innovation Application &nbsp; *(2024 – present)*
 
-**Fu Jen Catholic University** &nbsp; B.A., Italian Language & Culture / Physical Education &nbsp; *(2014 – 2019)* — incl. summer at **Università per Stranieri di Perugia** *(2017)*
+- **GPA: 4.0 / 4.0**
+- **Core coursework:** Data Structures, Operating Systems, Computer Networks, Object-Oriented Programming, Discrete Mathematics, Data Science Programming, Calculus, and Linear Algebra.
+- **Graduate-level coursework:** Software Design Patterns and Information Visualization; Management Information Systems *(in progress)*.
+- **Health Informatics:** HL7, FHIR, structured clinical data, and healthcare information-system architecture.
+
+**Fu Jen Catholic University** &nbsp; B.A., Italian Language & Culture &nbsp; *(2014 – 2019)* — incl. summer at **Università per Stranieri di Perugia** *(2017)*
+
+- **Earlier interdisciplinary coursework in athletic training, sports medicine, and exercise science:** Anatomy, Kinesiology, Exercise Physiology, Sports Injuries and First Aid, Sports Nutrition, and Exercise and Health Promotion.
+- **Music:** university-level coursework in percussion, ensemble performance, jazz, and musicianship, building on 10 years of formal music training.
 
 ## Community
 
@@ -89,4 +90,4 @@ Hand-coded the TypeScript gateway and AI-paired the Kotlin Android shell from my
 
 ---
 
-*Last updated: May 2026 · [Source](https://github.com/liying-c/liying-c.github.io)*
+*Last updated: September 2026 · [Source](https://github.com/liying-c/liying-c.github.io)*
