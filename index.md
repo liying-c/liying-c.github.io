@@ -25,18 +25,15 @@ Building and maintaining production systems across Java/Spring Boot, Python, and
 - Reverse-engineered undocumented schemas, business rules, and workflows across **five competing HIS products** using controlled experiments, database diffs, and Taiwan NHI specifications.
 - Built end-to-end migration workflows for clinical records and NHI claims, with pre-flight validation, unattended execution, and resumable checkpoints.
 - Validated migration outcomes through successful NHI claim submissions and XML-level reconciliation of clinical procedures and reimbursement points. The tooling supported onboarding for **20% of new clinic customers in 2025**.
-- Diagnosed state-ownership and instance-lifecycle issues, including implicit dependencies affecting ID remapping, retry safety, and multi-stage batch execution.
-- Proposed an incremental modernization strategy with engineering leadership to separate deterministic transformations, dependency resolution, and transactional execution; scoped a new codebase for fine-grained, AI-assisted implementation and review.
+- Identified opportunities to improve state ownership, retry safety, and execution boundaries in the legacy Python migration system; aligned a phased modernization approach with engineering leadership.
 - Built reusable test environments for product and design teams to explore legacy workflows and validate migration behavior.
 
 #### External API · self-service clinic systems *(2026 – present)*
 
-- Define API and system boundaries between the HIS and configurable self-service check-in / cash-deposit kiosks under incomplete and evolving vendor specifications.
-- Model multi-stage billing lifecycles and delta-based settlement adjustments; propose freezing prior-stage instances when a successor is created to limit cross-stage mutable-state dependencies.
-- Design person-scoped transaction exclusivity and settlement coordination using device-issued transaction IDs, with explicit rules for eligible documents and completed transactions. Atomicity, recovery, and device integration behavior remain under implementation and verification.
-- Collaborate with product design, frontend engineering, and senior reviewers to refine incomplete requirements and challenge cross-system synchronization assumptions.
-- Proposed the integration architecture, scoped device API-key model, and over half of the external API surface; refined API responsibilities and contracts through specification and architecture reviews.
-- Develop external APIs with **Fastify / TypeScript on Firebase**, including CLI-based device-key provisioning.
+- Proposed the integration architecture and designed over half of the vendor-facing API specification, including scoped device authentication.
+- Design transaction workflows spanning multi-stage billing, delta-based settlement, and concurrency considerations across the HIS and external devices.
+- Collaborate with product design, frontend and backend engineers, and external vendors to clarify evolving requirements, ownership boundaries, and API contracts.
+- Develop integration services with **TypeScript, Fastify, and Firebase**; transaction workflow implementation and external integration testing are ongoing.
 
 #### Java Spring Boot HIS · NHI *(2024 – present)*
 
@@ -68,7 +65,7 @@ Building and maintaining production systems across Java/Spring Boot, Python, and
 | **Languages** | Python · TypeScript · SQL · Java · C# · JavaScript · Shell |
 | **Backend & Data** | FastAPI · Fastify · Spring Boot · Express · OpenAPI · ETL / migration systems · PostgreSQL · MySQL · SQL Server · SQLite · FoxPro / DBF · BigQuery · Firestore |
 | **Cloud & Tooling** | GCP · Firebase · Cloudflare Workers · Azure DevOps · Docker · GitHub Actions · Playwright · Cucumber BDD · Jest / Vitest / Pytest · ISO 27001 / 27701 |
-| **Healthcare Domain** | HIS · Taiwan NHI workflows · clinical / claims data migration · HL7 · FHIR · structured clinical data |
+| **Healthcare Domain** | HIS · Taiwan NHI workflows · clinical / claims data migration · structured clinical data · HL7 / FHIR (coursework exposure) |
 
 ## Education
 
