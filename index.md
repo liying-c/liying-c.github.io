@@ -1,13 +1,13 @@
 **Software Engineer — Backend · Databases · System Integration**
 
-Backend and data-integration engineer working across Java/Spring Boot, Python and TypeScript. Own data-migration workflows and translate evolving business requirements into explicit lifecycle rules, API contracts and testable implementations.
+Backend and data-integration engineer working across SQL, Python, Java/Spring Boot and TypeScript. Own data-migration workflows and translate evolving business requirements into explicit lifecycle rules, API contracts and testable implementations.
 
 **Based in Taipei, Taiwan** · `cliying94 [at] gmail [dot] com` · [GitHub](https://github.com/liying-c) · [LinkedIn](https://www.linkedin.com/in/chen-li-ying) · 中文 · English · Italiano · Deutsch (beg.)
 
 ## Selected Highlights
 
 - **Healthcare data migration:** Own Dentall's clinic migration system, reverse-engineering undocumented data models and business semantics across **5 competing HIS products**; the tooling supported onboarding for **20% of new clinic customers in 2025**.
-- **System design & integration:** Lead core-system design and implementation for an IoT-assisted billing workflow, defining lifecycle and delta-settlement boundaries across the HIS and device-facing APIs (**in progress**).
+- **Backend design & integration:** Design and implement multi-stage billing workflows and backend APIs for third-party self-service devices, defining lifecycle and settlement boundaries (**in progress**).
 - **Cross-language delivery & review:** Work across **Java/Spring Boot, Python and TypeScript** services, translating requirements into data contracts, reviewable changes and verification steps; **150+ merged PRs** and **120+ code reviews** across 8 repositories.
 - **Mentoring & delivery:** Mentored **4 classmates** through their first end-to-end delivery of an LLM-backed Android scam detector and Cloudflare Workers gateway, from initial scaffold to v2.1.3 in a **3-week sprint** ([App](https://github.com/SEDIAApp2025/AntifraudApp) · [Gateway](https://github.com/SEDIAApp2025/antifraud-gateway)).
 
@@ -24,18 +24,19 @@ Backend and data-integration engineer working across Java/Spring Boot, Python an
 
 - Reverse-engineered undocumented schemas, business rules, and workflows across **five competing HIS products** using controlled experiments, database diffs, and Taiwan NHI specifications.
 - Built end-to-end migration workflows for clinical records and NHI claims, with pre-flight validation, unattended execution, and resumable checkpoints.
+- Built SQL-based migration transformations, including SQL Server XML parsing, relational staging and clinical/claims data mapping.
 - Validated migration outcomes through successful NHI claim submissions and XML-level reconciliation of clinical procedures and reimbursement points. The tooling supported onboarding for **20% of new clinic customers in 2025**.
 - Delivered a PM-editable spreadsheet/CSV workflow for customer-specific questionnaire conversion, replacing hard-coded mappings with validated inputs, legacy-default fallback and per-run configuration snapshots.
 - Plan a component-wise migration-system rebuild around explicit state ownership and retry safety; assess cross-month identifier dependencies before changing the write path (**design stage**).
 - Built reusable test environments for product and design teams to explore legacy workflows and validate migration behavior.
 
-#### IoT Billing & External API Integration *(2026 – present; implementation in progress)*
+#### Billing Workflows & Third-Party Device APIs *(2026 – present; implementation in progress)*
 
 - Proposed the integration architecture and designed over half of the vendor-facing API specification; define access through capability scopes rather than fixed device categories.
-- Lead core-system design and implementation of multi-stage billing, defining when prior-stage amounts become fixed and how subsequent changes produce settlement deltas.
-- Integrate the existing device Freeze/completion contract with patient-level settlement eligibility and transaction ownership, keeping devices independent of internal billing-stage conditions.
+- Design and implement core billing workflows, defining when prior-stage amounts become fixed and how subsequent changes produce settlement deltas.
+- Define patient-level transaction ownership and locking boundaries that protect the selected billing-record set while allowing amount updates to produce subsequent settlement deltas.
 - Resolve business-rule edge cases with product design and frontend engineers; split cross-repository work into reviewable changes and coordinate technical reviews of transaction and cache behaviour.
-- Develop the **Java/Spring Boot core** and **TypeScript/Fastify integration services with Firebase**; core workflow implementation and vendor integration testing are ongoing.
+- Implement the backend in **Java/Spring Boot** and vendor-facing APIs in **TypeScript/Fastify with Firebase**; third-party devices initiate requests and report transaction completion.
 
 #### Java Spring Boot HIS · NHI *(2024 – present)*
 
@@ -65,7 +66,8 @@ Backend and data-integration engineer working across Java/Spring Boot, Python an
 | Area | Stack |
 |------|-------|
 | **Languages** | Python · TypeScript · SQL · Java · C# · JavaScript · Shell |
-| **Engineering** | Lifecycle modelling · API / data contracts · Migration validation · Regression testing · Cross-system integration |
+| **Engineering** | Lifecycle modelling · Transaction boundaries · API / data contracts · Migration validation · Regression testing · Cross-system integration |
+| **SQL & Data Processing** | Multi-stage transformations · XML-to-relational mapping · Window functions · Data reconciliation |
 | **Backend & Data** | FastAPI · Fastify · Spring Boot · Express · OpenAPI · ETL / migration systems · PostgreSQL · MySQL · SQL Server · SQLite · FoxPro / DBF · BigQuery · Firestore |
 | **Cloud & Tooling** | GCP · Firebase · Cloudflare Workers · Azure DevOps · Docker · GitHub Actions · Playwright · Cucumber BDD · Jest / Vitest / Pytest · ISO 27001 / 27701 |
 | **Healthcare Domain** | HIS · Taiwan NHI workflows · clinical / claims data migration · structured clinical data · HL7 / FHIR (coursework exposure) |
