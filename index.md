@@ -4,6 +4,11 @@ Backend and data-integration engineer working across SQL, Python, Java/Spring Bo
 
 **Based in Taipei, Taiwan** · `cliying94 [at] gmail [dot] com` · [GitHub](https://github.com/liying-c) · [LinkedIn](https://www.linkedin.com/in/chen-li-ying) · 中文 · English · Italiano · Deutsch (beg.)
 
+<p class="cv-download-row">
+  <a class="cv-download" href="{{ '/Li-Ying_Chen_CV.pdf' | relative_url }}" download="Li-Ying_Chen_CV.pdf" type="application/pdf">Download CV · 1-page PDF</a>
+  <small>Updated <time datetime="2026-11-04">4 November 2026</time></small>
+</p>
+
 ## Selected Highlights
 
 - **Healthcare data migration:** Own Dentall's clinic migration system, reverse-engineering undocumented data models and business semantics across **5 competing HIS products**; the tooling supported onboarding for **20% of new clinic customers in 2025**.

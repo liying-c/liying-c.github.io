@@ -3,7 +3,34 @@
 
 @import "{{ site.theme }}";
 
+.cv-download-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  margin: 1.25rem 0;
+}
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid currentColor;
+  border-radius: 0.3rem;
+  font-weight: 600;
+}
+.cv-download:hover {
+  background: #edf5fc;
+  text-decoration: none;
+}
+.cv-download:focus-visible {
+  outline: 3px solid #155799;
+  outline-offset: 3px;
+}
+
 @media print {
+  .cv-download-row { display: none !important; }
+
   @page {
     margin: 0.5in;
     size: letter;
